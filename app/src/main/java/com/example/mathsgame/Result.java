@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Result extends AppCompatActivity {
 
@@ -28,6 +29,8 @@ public class Result extends AppCompatActivity {
         score = intent.getIntExtra("score",0);
         String userScore = String.valueOf(score);
         result.setText("Your Score :" +" "+userScore);
+
+        Toast.makeText(getApplicationContext(),"You made it to the end",Toast.LENGTH_LONG).show();
 
         playAgain.setOnClickListener(new View.OnClickListener() {
             @Override
